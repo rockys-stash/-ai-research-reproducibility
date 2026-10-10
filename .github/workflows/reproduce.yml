@@ -1,0 +1,36 @@
+# The third, independent rerun of every frozen artifact, on a GitHub-hosted runner (another machine,
+# another kernel and CPU). Started by hand (`make ci-rerun`); its rerun directories are uploaded as the
+# `ci-reruns` artifact and committed with `make import-ci RUN=<id>`. The rerun script uses only the
+# standard library, so nothing from this repository is installed: each artifact gets a new virtual
+# environment with only its own requirements.txt.
+name: Reproduce
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rerun every artifact in a fresh virtual environment
+        run: |
+          set -u
+          for a in artifacts/*/; do
+            a=$(basename "$a")
+            case "$a" in dev-*) continue;; esac
+            python src/reprobench/rerun.py "artifacts/$a" "ci-reruns/$a/ci-1" --mode venv --rerun-id ci-1 \
+              --machine "github-actions $(uname -m) $RUNNER_OS" || echo "$a: harness error"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ci-reruns
+          path: ci-reruns
+          include-hidden-files: false

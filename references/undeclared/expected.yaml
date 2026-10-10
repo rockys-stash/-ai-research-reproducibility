@@ -1,0 +1,5 @@
+problem: bootstrap
+defect: imports a package (pandas) that requirements.txt does not declare
+expect: code fails in a clean environment; environment import check fails; results and claims 0
+low: [code, environment, results, claims]   # components the score should put below 0.67
+high: []  # components the score should put at or above 0.67

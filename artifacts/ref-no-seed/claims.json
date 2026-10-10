@@ -1,0 +1,23 @@
+[
+ {
+  "text": "The 128-unit network reaches the accuracy we measured",
+  "left": "mlp128_test_accuracy",
+  "op": "≈",
+  "right": "0.980000",
+  "tolerance": 0.001
+ },
+ {
+  "text": "The 32-unit network reaches the accuracy we measured",
+  "left": "mlp32_test_accuracy",
+  "op": "≈",
+  "right": "0.982222",
+  "tolerance": 0.001
+ },
+ {
+  "text": "The larger network is more accurate",
+  "left": "mlp128_test_accuracy",
+  "op": ">",
+  "right": "mlp32_test_accuracy",
+  "tolerance": 0
+ }
+]

@@ -1,0 +1,11 @@
+key: bootstrap
+title: Bootstrap interval of a difference in means
+problem: >-
+  Using the wine dataset that ships with scikit-learn (sklearn.datasets.load_wine), estimate the
+  difference in mean alcohol content between wine class 0 and wine class 1, with a 95% bootstrap
+  confidence interval from 2000 bootstrap resamples. Find out whether class 0 has higher alcohol
+  content.
+results_keys:
+  mean_difference: mean alcohol of class 0 minus mean alcohol of class 1
+  ci_low: lower end of the 95% bootstrap interval of the difference
+  ci_high: upper end of the 95% bootstrap interval of the difference

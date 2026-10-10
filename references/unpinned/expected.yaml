@@ -1,0 +1,5 @@
+problem: features
+defect: dependencies not pinned
+expect: environment lower (pinning); results reproduce while the current releases agree
+low: [environment]   # components the score should put below 0.67
+high: [code]  # components the score should put at or above 0.67

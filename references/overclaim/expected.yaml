@@ -1,0 +1,5 @@
+problem: compare
+defect: a claim its own results do not support
+expect: code, environment and results high; claims low
+low: [claims]   # components the score should put below 0.67
+high: [code, environment, results]  # components the score should put at or above 0.67

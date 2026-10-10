@@ -1,0 +1,4 @@
+[
+ {"text": "Class 0 wines have higher mean alcohol than class 1", "left": "mean_difference", "op": ">", "right": "0", "tolerance": 0},
+ {"text": "The 95% bootstrap interval excludes zero", "left": "ci_low", "op": ">", "right": "0", "tolerance": 0}
+]

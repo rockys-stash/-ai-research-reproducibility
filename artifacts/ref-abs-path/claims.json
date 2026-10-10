@@ -1,0 +1,16 @@
+[
+ {
+  "text": "Polynomial features lower cross-validated R²",
+  "left": "poly_ridge_r2_mean",
+  "op": "<",
+  "right": "ridge_r2_mean",
+  "tolerance": 0
+ },
+ {
+  "text": "Ridge on the original features reaches R² of about 0.49",
+  "left": "ridge_r2_mean",
+  "op": "≈",
+  "right": "0.49",
+  "tolerance": 0.005
+ }
+]

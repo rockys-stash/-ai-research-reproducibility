@@ -1,0 +1,5 @@
+{
+ "mlp32_test_accuracy": 0.9822222222222222,
+ "mlp128_test_accuracy": 0.98,
+ "accuracy_difference": -0.0022222222222222365
+}

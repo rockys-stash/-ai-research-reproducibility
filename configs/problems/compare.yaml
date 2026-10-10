@@ -1,0 +1,10 @@
+key: compare
+title: Random forest vs logistic regression
+problem: >-
+  Using the breast cancer dataset that ships with scikit-learn (sklearn.datasets.load_breast_cancer),
+  find out whether a random forest classifier is more accurate than logistic regression. Evaluate both
+  with 5-fold cross-validation on accuracy.
+results_keys:
+  rf_accuracy_mean: mean cross-validated accuracy of the random forest
+  lr_accuracy_mean: mean cross-validated accuracy of logistic regression
+  accuracy_difference: rf_accuracy_mean minus lr_accuracy_mean

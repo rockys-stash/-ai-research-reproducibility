@@ -1,0 +1,5 @@
+problem: mlp
+defect: no random seed
+expect: code and environment high; results not reproduced; exact-value claims fail
+low: [results, claims]   # components the score should put below 0.67
+high: [code, environment]  # components the score should put at or above 0.67

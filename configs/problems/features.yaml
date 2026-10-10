@@ -1,0 +1,10 @@
+key: features
+title: Polynomial features for ridge regression
+problem: >-
+  Using the diabetes regression dataset that ships with scikit-learn (sklearn.datasets.load_diabetes),
+  find out whether adding degree-2 polynomial features improves ridge regression. Evaluate both models
+  with 5-fold cross-validation on R².
+results_keys:
+  ridge_r2_mean: mean cross-validated R² of ridge regression on the original features
+  poly_ridge_r2_mean: mean cross-validated R² of ridge regression with degree-2 polynomial features
+  r2_difference: poly_ridge_r2_mean minus ridge_r2_mean

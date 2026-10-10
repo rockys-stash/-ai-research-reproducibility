@@ -1,0 +1,5 @@
+problem: compare
+defect: none
+expect: every component high; the positive control
+low: []   # components the score should put below 0.67
+high: [code, environment, results, claims]  # components the score should put at or above 0.67

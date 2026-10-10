@@ -1,0 +1,6 @@
+problem: features
+defect: reads its data from an absolute path that exists only on the author's machine
+expect: works for the author; code fails on every rerun
+setup: diabetes_csv
+low: [code, results, claims]   # components the score should put below 0.67
+high: [environment]  # components the score should put at or above 0.67

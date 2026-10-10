@@ -1,0 +1,23 @@
+[
+ {
+  "text": "The random forest is more accurate than logistic regression",
+  "left": "rf_accuracy_mean",
+  "op": ">",
+  "right": "lr_accuracy_mean",
+  "tolerance": 0
+ },
+ {
+  "text": "The random forest wins by more than five points",
+  "left": "accuracy_difference",
+  "op": ">",
+  "right": "0.05",
+  "tolerance": 0
+ },
+ {
+  "text": "Logistic regression is above 0.95 accuracy",
+  "left": "lr_accuracy_mean",
+  "op": ">",
+  "right": "0.95",
+  "tolerance": 0
+ }
+]

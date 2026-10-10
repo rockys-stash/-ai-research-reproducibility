@@ -1,0 +1,10 @@
+key: mlp
+title: Hidden-layer size of a small neural network
+problem: >-
+  Using the digits dataset that ships with scikit-learn (sklearn.datasets.load_digits), split the data
+  into 75% training and 25% test, train a multi-layer perceptron classifier with one hidden layer of
+  32 units and one with 128 units, and find out whether the larger network has higher test accuracy.
+results_keys:
+  mlp32_test_accuracy: test accuracy with 32 hidden units
+  mlp128_test_accuracy: test accuracy with 128 hidden units
+  accuracy_difference: mlp128_test_accuracy minus mlp32_test_accuracy

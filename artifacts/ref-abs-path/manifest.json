@@ -1,0 +1,30 @@
+{
+ "artifact": "ref-abs-path",
+ "problem": "features",
+ "agent": "reference",
+ "agent_label": "Reference (hand-written)",
+ "seed": 0,
+ "kind": "reference",
+ "defect": "reads its data from an absolute path that exists only on the author's machine",
+ "expect": "works for the author; code fails on every rerun",
+ "author_succeeded": true,
+ "executions": 1,
+ "author_environment": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "scikit-learn": "1.9.1"
+  }
+ },
+ "frozen_at": "2026-10-10T21:02:23+00:00",
+ "sha256": {
+  "requirements.txt": "ef21a3fa7d07b3656a3dd3ec750be29956f9369f5d744a0d8a3e4dd24df4acf2",
+  "run.py": "1925cdddf16ae1d68ebcade78195b26397164a0ccf303187ac07ea3e80760159",
+  "results.json": "b0739e041cf2520916e65698234ff19fa779c0fc3b85781e2042c9d9ac983ec1",
+  "claims.json": "d37ee0ac1ca6af473f5fd7e0e35e3385b3b92adc227813e5f1475667cf1b1908",
+  "README.md": "456e0d5f5bf4729e98a7415c7add12800659f57948e247d134a5a05ffe8c9ec6"
+ }
+}

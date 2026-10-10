@@ -1,0 +1,30 @@
+{
+ "artifact": "ref-overclaim",
+ "problem": "compare",
+ "agent": "reference",
+ "agent_label": "Reference (hand-written)",
+ "seed": 0,
+ "kind": "reference",
+ "defect": "a claim its own results do not support",
+ "expect": "code, environment and results high; claims low",
+ "author_succeeded": true,
+ "executions": 1,
+ "author_environment": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "scikit-learn": "1.9.1"
+  }
+ },
+ "frozen_at": "2026-10-10T21:02:31+00:00",
+ "sha256": {
+  "requirements.txt": "ef21a3fa7d07b3656a3dd3ec750be29956f9369f5d744a0d8a3e4dd24df4acf2",
+  "run.py": "24591e1059d20294ccad825dd652d6544cc6e23a96850d2bab21433919c97ee6",
+  "results.json": "ba4fe94ab8c3bf7c564475483043948714f6e40dbf5c55f383ba9a4e22b948e8",
+  "claims.json": "0e8100a04a048a7433bbbe4f49d3d7be4410c956038c575bb6828d2ac34f88f6",
+  "README.md": "92741d91b29228c74c1b0e074ed4efc43d53ea6560467158273b4b67f3e32ffd"
+ }
+}

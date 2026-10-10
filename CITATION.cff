@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "AI research reproducibility benchmark: agent-written research rerun independently in clean environments"
+type: software
+authors:
+  - alias: rockys-stash
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/rockys-stash/-ai-research-reproducibility"
+keywords:
+  - reproducibility
+  - research agents
+  - evaluation
+  - computational reproducibility
+references:
+  - type: conference-paper
+    title: "State of the Art: Reproducibility in Artificial Intelligence"
+    authors:
+      - family-names: Gundersen
+        given-names: Odd Erik
+      - family-names: Kjensmo
+        given-names: Sigbjørn
+    collection-title: "Proceedings of the AAAI Conference on Artificial Intelligence"
+    volume: 32
+    year: 2018
+    doi: 10.1609/aaai.v32i1.11503
+  - type: article
+    title: "Improving Reproducibility in Machine Learning Research (A Report from the NeurIPS 2019 Reproducibility Program)"
+    authors:
+      - family-names: Pineau
+        given-names: Joelle
+    journal: "Journal of Machine Learning Research"
+    volume: 22
+    year: 2021
+    url: "https://jmlr.org/papers/v22/20-303.html"
+  - type: article
+    title: "CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark"
+    authors:
+      - family-names: Siegel
+        given-names: Zachary S.
+      - family-names: Kapoor
+        given-names: Sayash
+    year: 2024
+    url: "https://arxiv.org/abs/2409.11363"
+  - type: article
+    title: "PaperBench: Evaluating AI's Ability to Replicate AI Research"
+    authors:
+      - family-names: Starace
+        given-names: Giulio
+      - family-names: Jaffe
+        given-names: Oliver
+    year: 2025
+    url: "https://arxiv.org/abs/2504.01848"

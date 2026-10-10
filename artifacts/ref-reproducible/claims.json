@@ -1,0 +1,23 @@
+[
+ {
+  "text": "Logistic regression (standardised) is more accurate than the random forest",
+  "left": "lr_accuracy_mean",
+  "op": ">",
+  "right": "rf_accuracy_mean",
+  "tolerance": 0
+ },
+ {
+  "text": "Logistic regression reaches about 0.979 accuracy",
+  "left": "lr_accuracy_mean",
+  "op": "≈",
+  "right": "0.979",
+  "tolerance": 0.005
+ },
+ {
+  "text": "The random forest is less accurate (negative difference)",
+  "left": "accuracy_difference",
+  "op": "<",
+  "right": "0",
+  "tolerance": 0
+ }
+]

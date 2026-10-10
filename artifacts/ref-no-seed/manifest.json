@@ -1,0 +1,30 @@
+{
+ "artifact": "ref-no-seed",
+ "problem": "mlp",
+ "agent": "reference",
+ "agent_label": "Reference (hand-written)",
+ "seed": 0,
+ "kind": "reference",
+ "defect": "no random seed",
+ "expect": "code and environment high; results not reproduced; exact-value claims fail",
+ "author_succeeded": true,
+ "executions": 1,
+ "author_environment": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "scikit-learn": "1.9.1"
+  }
+ },
+ "frozen_at": "2026-10-10T21:02:27+00:00",
+ "sha256": {
+  "requirements.txt": "ef21a3fa7d07b3656a3dd3ec750be29956f9369f5d744a0d8a3e4dd24df4acf2",
+  "run.py": "48df4de84720c803b0198ea86b1ffea6794352245fe554b7e4c3f41b63d5f0e0",
+  "results.json": "defcfd18689e80f7f3048f3bcec199bfc7b2e9b5969e520218ec529f7180fdb8",
+  "claims.json": "e5739a05c37e6863825be89782308589d3cfd51b901105db93776d28dfd12c92",
+  "README.md": "74b8e4a480d0179bb6c0c3a8de26c6b288d8484580fc7618113598d9f49b7245"
+ }
+}
