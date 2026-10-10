@@ -1,0 +1,16 @@
+[
+ {
+  "text": "poly_ridge_r2_mean < ridge_r2_mean",
+  "left": "poly_ridge_r2_mean",
+  "op": "<",
+  "right": "ridge_r2_mean",
+  "tolerance": 0.01
+ },
+ {
+  "text": "r2_difference > 0",
+  "left": "r2_difference",
+  "op": ">",
+  "right": "0",
+  "tolerance": 0.01
+ }
+]

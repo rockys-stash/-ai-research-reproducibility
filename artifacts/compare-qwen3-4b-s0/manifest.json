@@ -1,0 +1,28 @@
+{
+ "artifact": "compare-qwen3-4b-s0",
+ "problem": "compare",
+ "agent": "qwen3-4b",
+ "agent_label": "Qwen3-4B-Instruct-2507 (Q4_0)",
+ "seed": 0,
+ "kind": "agent",
+ "author_succeeded": true,
+ "executions": 1,
+ "author_environment": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "scikit-learn": "1.9.1"
+  }
+ },
+ "frozen_at": "2026-10-10T21:50:12+00:00",
+ "sha256": {
+  "requirements.txt": "7c1ab07500ae869d252a88be9880cda5749f52bd5867cae7c7140f3e6a117a91",
+  "run.py": "553b3815a9fa719b0d3c2b6d05e5d924ec3f97a05e59682cbd008330d4e4f7ab",
+  "results.json": "e2fd0533cbb8348c14073ed59e897f05d98015a37852589d5c4c4bbabab44301",
+  "claims.json": "2188ad84f0f3830ae85a8adeb8ac707a54581a60b1a6b66f600e30b52c87b60b",
+  "README.md": "4ed3e769b31589a1d0dd078f2bbd0bdf011a08b29f001269177acc0b9cb2c133"
+ }
+}

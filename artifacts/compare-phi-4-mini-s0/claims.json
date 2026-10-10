@@ -1,0 +1,37 @@
+[
+ {
+  "text": "rf_accuracy_mean > lr_accuracy_mean",
+  "left": "rf_accuracy_mean",
+  "op": ">",
+  "right": "lr_accuracy_mean",
+  "tolerance": 0.001
+ },
+ {
+  "text": "lr_accuracy_mean < rf_accuracy_mean",
+  "left": "lr_accuracy_mean",
+  "op": "<",
+  "right": "rf_accuracy_mean",
+  "tolerance": 0.001
+ },
+ {
+  "text": "rf_accuracy_mean >= lr_accuracy_mean",
+  "left": "rf_accuracy_mean",
+  "op": ">=",
+  "right": "lr_accuracy_mean",
+  "tolerance": 0.001
+ },
+ {
+  "text": "lr_accuracy_mean <= rf_accuracy_mean",
+  "left": "lr_accuracy_mean",
+  "op": "<=",
+  "right": "rf_accuracy_mean",
+  "tolerance": 0.001
+ },
+ {
+  "text": "rf_accuracy_mean == lr_accuracy_mean",
+  "left": "rf_accuracy_mean",
+  "op": ">",
+  "right": "lr_accuracy_mean",
+  "tolerance": 0.001
+ }
+]

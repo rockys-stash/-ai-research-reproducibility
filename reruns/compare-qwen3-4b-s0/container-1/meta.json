@@ -1,0 +1,25 @@
+{
+ "rerun_id": "container-1",
+ "mode": "container",
+ "machine": "vm",
+ "started": "2026-10-10T23:48:29+00:00",
+ "build_exit": 0,
+ "run_exit": 0,
+ "run_seconds": 2.69,
+ "total_seconds": 27.84,
+ "python": "3.12.15",
+ "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.41",
+ "results_written": true,
+ "thread_env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "image": "mirror.gcr.io/library/python:3.12-slim",
+ "image_digests": [
+  "mirror.gcr.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+  "public.ecr.aws/docker/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1"
+ ],
+ "docker_exit": 0,
+ "docker_stderr": ""
+}

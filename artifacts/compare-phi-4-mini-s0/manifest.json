@@ -1,0 +1,28 @@
+{
+ "artifact": "compare-phi-4-mini-s0",
+ "problem": "compare",
+ "agent": "phi-4-mini",
+ "agent_label": "Phi-4-mini-instruct (Q4_K_M)",
+ "seed": 0,
+ "kind": "agent",
+ "author_succeeded": true,
+ "executions": 1,
+ "author_environment": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "scikit-learn": "1.9.1"
+  }
+ },
+ "frozen_at": "2026-10-10T23:37:02+00:00",
+ "sha256": {
+  "requirements.txt": "76b532ee126e466f27a9d99c4bb64c38b02c5a3e829e5a9a1f4a50d1ae4758c7",
+  "run.py": "9bcb32ed5bf43ee3a618ce743df28bf7bb0efb658ac4d5f0e6c6b24ee2878c0a",
+  "results.json": "54d7ba44b9b99b2e8770974b29abfb882ff7902030eafb7ef618bead30ba8d43",
+  "claims.json": "db68dd927fa1c797d572223b0b70131ecfd28c33000b7995dc057d218d66eaae",
+  "README.md": "090a86c0e58fa77d0b7319136065f12f3d5d75d3b33d986f38b21c51bded3af3"
+ }
+}

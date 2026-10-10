@@ -1,0 +1,37 @@
+[
+ {
+  "text": "ridge_r2_mean < poly_ridge_r2_mean",
+  "left": "ridge_r2_mean",
+  "op": "<",
+  "right": "poly_ridge_r2_mean",
+  "tolerance": 0
+ },
+ {
+  "text": "r2_difference ≈ 0.0004",
+  "left": "r2_difference",
+  "op": "≈",
+  "right": "",
+  "tolerance": 1e-05
+ },
+ {
+  "text": "poly_ridge_r2_mean ≈ 0.4106",
+  "left": "poly_ridge_r2_mean",
+  "op": "≈",
+  "right": "",
+  "tolerance": 0.0001
+ },
+ {
+  "text": "ridge_r2_mean ≈ 0.4102",
+  "left": "ridge_r2_mean",
+  "op": "≈",
+  "right": "",
+  "tolerance": 0.0001
+ },
+ {
+  "text": "ridge_r2_mean < 0.42",
+  "left": "ridge_r2_mean",
+  "op": "<",
+  "right": "",
+  "tolerance": 0
+ }
+]

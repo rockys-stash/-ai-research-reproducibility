@@ -1,0 +1,37 @@
+[
+ {
+  "text": "mlp32_test_accuracy < mlp128_test_accuracy",
+  "left": "mlp32_test_accuracy",
+  "op": "<",
+  "right": "mlp128_test_accuracy",
+  "tolerance": 1e-06
+ },
+ {
+  "text": "mlp128_test_accuracy > mlp32_test_accuracy",
+  "left": "mlp128_test_accuracy",
+  "op": ">",
+  "right": "mlp32_test_accuracy",
+  "tolerance": 1e-06
+ },
+ {
+  "text": "mlp128_test_accuracy - mlp32_test_accuracy = accuracy_difference",
+  "left": "mlp128_test_accuracy",
+  "op": ">",
+  "right": "mlp32_test_accuracy",
+  "tolerance": 1e-06
+ },
+ {
+  "text": "mlp128_test_accuracy - mlp32_test_accuracy < accuracy_difference",
+  "left": "mlp128_test_accuracy",
+  "op": "<",
+  "right": "accuracy_difference",
+  "tolerance": 1e-06
+ },
+ {
+  "text": "mlp128_test_accuracy - mlp32_test_accuracy = 0.006666666666666599",
+  "left": "mlp128_test_accuracy",
+  "op": ">",
+  "right": "mlp32_test_accuracy",
+  "tolerance": 1e-06
+ }
+]

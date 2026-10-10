@@ -1,0 +1,1 @@
+This script trains two multi-layer perceptron classifiers on the digits dataset with different numbers of hidden units (32 and 128) and compares their test accuracies. The results show that the larger network with 128 hidden units has a higher test accuracy than the smaller network with 32 hidden units. The difference in accuracy between the two networks is approximately 0.0067.

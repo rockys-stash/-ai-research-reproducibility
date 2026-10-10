@@ -1,0 +1,28 @@
+{
+ "artifact": "features-phi-4-mini-s0",
+ "problem": "features",
+ "agent": "phi-4-mini",
+ "agent_label": "Phi-4-mini-instruct (Q4_K_M)",
+ "seed": 0,
+ "kind": "agent",
+ "author_succeeded": true,
+ "executions": 1,
+ "author_environment": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "scikit-learn": "1.9.1"
+  }
+ },
+ "frozen_at": "2026-10-10T23:40:03+00:00",
+ "sha256": {
+  "requirements.txt": "76b532ee126e466f27a9d99c4bb64c38b02c5a3e829e5a9a1f4a50d1ae4758c7",
+  "run.py": "589185eee511c3cb7cd39120467db9d205e14f6466760537e94a4217efed5c5b",
+  "results.json": "0fff748b9ce42697199f119cb1ddf6e066bc8ca6e561e2a8fcaca3da9fdc2ceb",
+  "claims.json": "e41ba263a2ab97817ee16529da66f6a9c185d0afe887c3b87f26cce6dd42240b",
+  "README.md": "7fced71d489a90aa52b6b2ab740681bfcfc45c1c7c2561f62e1750fd9007b16d"
+ }
+}

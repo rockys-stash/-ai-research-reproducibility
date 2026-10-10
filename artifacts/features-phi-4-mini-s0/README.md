@@ -1,0 +1,1 @@
+This script evaluates the performance of ridge regression on the diabetes dataset with and without degree-2 polynomial features using 5-fold cross-validation. The results show that adding degree-2 polynomial features slightly improves the R² value of ridge regression. However, the improvement is not statistically significant given the tolerance level.

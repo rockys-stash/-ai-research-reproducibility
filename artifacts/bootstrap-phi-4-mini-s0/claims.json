@@ -1,0 +1,37 @@
+[
+ {
+  "text": "mean_difference > ci_high",
+  "left": "mean_difference",
+  "op": ">",
+  "right": "ci_high",
+  "tolerance": 1e-05
+ },
+ {
+  "text": "mean_difference < ci_low",
+  "left": "mean_difference",
+  "op": "<",
+  "right": "ci_low",
+  "tolerance": 1e-05
+ },
+ {
+  "text": "mean_difference >= ci_low",
+  "left": "mean_difference",
+  "op": ">=",
+  "right": "ci_low",
+  "tolerance": 1e-05
+ },
+ {
+  "text": "mean_difference <= ci_high",
+  "left": "mean_difference",
+  "op": "<=",
+  "right": "ci_high",
+  "tolerance": 1e-05
+ },
+ {
+  "text": "mean_difference == ci_low",
+  "left": "mean_difference",
+  "op": "≈",
+  "right": "ci_low",
+  "tolerance": 1e-05
+ }
+]
