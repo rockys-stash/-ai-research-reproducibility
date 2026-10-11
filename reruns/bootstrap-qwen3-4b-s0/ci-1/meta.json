@@ -1,0 +1,20 @@
+{
+ "rerun_id": "ci-1",
+ "mode": "venv",
+ "machine": "github-actions x86_64 Linux",
+ "started": "2026-10-10T23:53:34+00:00",
+ "build_exit": 0,
+ "run_exit": 0,
+ "run_seconds": 1.69,
+ "total_seconds": 21.4,
+ "python": "3.12.15",
+ "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+ "results_written": true,
+ "thread_env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "base_python": "3.12.15",
+ "shell_exit": 0
+}
