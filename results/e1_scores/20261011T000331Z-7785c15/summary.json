@@ -1,0 +1,247 @@
+{
+ "title": "E1 Reproducibility of agent-written research",
+ "question": "When an agent's research is rerun from its own files on clean machines, what reproduces?",
+ "findings": [
+  "phi-4-mini: 4/4 artifacts ran for their author; mean RRS 0.60 (code 0.75, environment 0.33, results 0.67, claims 0.57).",
+  "qwen3-4b: 4/4 artifacts ran for their author; mean RRS 0.75 (code 1.00, environment 1.00, results 0.83, claims 0.20).",
+  "Highest RRS 0.88 (mlp-phi-4-mini-s0); lowest 0.00 (bootstrap-phi-4-mini-s0)."
+ ],
+ "tables": [
+  {
+   "id": "artifacts",
+   "caption": "Every agent artifact (components in [0, 1]; RRS weighted)",
+   "columns": [
+    {
+     "key": "artifact",
+     "label": "Artifact",
+     "align": "l"
+    },
+    {
+     "key": "author_ran",
+     "label": "Ran for its author",
+     "align": "l"
+    },
+    {
+     "key": "executions",
+     "label": "Author executions",
+     "align": "r"
+    },
+    {
+     "key": "reruns",
+     "label": "Reruns",
+     "align": "r"
+    },
+    {
+     "key": "code",
+     "label": "Code",
+     "align": "r"
+    },
+    {
+     "key": "environment",
+     "label": "Environment",
+     "align": "r"
+    },
+    {
+     "key": "results",
+     "label": "Results",
+     "align": "r"
+    },
+    {
+     "key": "claims",
+     "label": "Claims",
+     "align": "r"
+    },
+    {
+     "key": "rrs",
+     "label": "RRS",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "artifact": "bootstrap-phi-4-mini-s0",
+     "problem": "bootstrap",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 2,
+     "reruns": 3,
+     "code": "0.00",
+     "environment": "0.00",
+     "results": "0.00",
+     "claims": "0.00",
+     "rrs": "0.00"
+    },
+    {
+     "artifact": "bootstrap-qwen3-4b-s0",
+     "problem": "bootstrap",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "0.33",
+     "claims": "0.20",
+     "rrs": "0.60"
+    },
+    {
+     "artifact": "compare-phi-4-mini-s0",
+     "problem": "compare",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "0.33",
+     "results": "0.67",
+     "claims": "1.00",
+     "rrs": "0.77"
+    },
+    {
+     "artifact": "compare-qwen3-4b-s0",
+     "problem": "compare",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "1.00",
+     "claims": "0.20",
+     "rrs": "0.80"
+    },
+    {
+     "artifact": "features-phi-4-mini-s0",
+     "problem": "features",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "0.33",
+     "results": "1.00",
+     "claims": "0.50",
+     "rrs": "0.74"
+    },
+    {
+     "artifact": "features-qwen3-4b-s0",
+     "problem": "features",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "1.00",
+     "claims": "0.20",
+     "rrs": "0.80"
+    },
+    {
+     "artifact": "mlp-phi-4-mini-s0",
+     "problem": "mlp",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "0.67",
+     "results": "1.00",
+     "claims": "0.80",
+     "rrs": "0.88"
+    },
+    {
+     "artifact": "mlp-qwen3-4b-s0",
+     "problem": "mlp",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "1.00",
+     "claims": "0.20",
+     "rrs": "0.80"
+    }
+   ]
+  },
+  {
+   "id": "by_agent",
+   "caption": "Mean per agent",
+   "columns": [
+    {
+     "key": "agent",
+     "label": "Agent",
+     "align": "l"
+    },
+    {
+     "key": "n",
+     "label": "Artifacts",
+     "align": "r"
+    },
+    {
+     "key": "author_ran",
+     "label": "Ran for author",
+     "align": "r"
+    },
+    {
+     "key": "code",
+     "label": "Code",
+     "align": "r"
+    },
+    {
+     "key": "environment",
+     "label": "Environment",
+     "align": "r"
+    },
+    {
+     "key": "results",
+     "label": "Results",
+     "align": "r"
+    },
+    {
+     "key": "claims",
+     "label": "Claims",
+     "align": "r"
+    },
+    {
+     "key": "rrs",
+     "label": "RRS",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "agent": "phi-4-mini",
+     "n": 4,
+     "author_ran": 4,
+     "code": "0.75",
+     "environment": "0.33",
+     "results": "0.67",
+     "claims": "0.57",
+     "rrs": "0.60"
+    },
+    {
+     "agent": "qwen3-4b",
+     "n": 4,
+     "author_ran": 4,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "0.83",
+     "claims": "0.20",
+     "rrs": "0.75"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "RRS = 0.25·code + 0.2·environment + 0.3·results + 0.25·claims. Every component's evidence (rerun, file, log line) is in scores.json and on the artifact's page in the console."
+ ]
+}

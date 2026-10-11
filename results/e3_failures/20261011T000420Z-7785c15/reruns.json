@@ -1,0 +1,296 @@
+[
+ {
+  "artifact": "bootstrap-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "install_failure",
+  "evidence": "ModuleNotFoundError: No module named 'numpy'"
+ },
+ {
+  "artifact": "bootstrap-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "install_failure",
+  "evidence": "ModuleNotFoundError: No module named 'numpy'"
+ },
+ {
+  "artifact": "bootstrap-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "install_failure",
+  "evidence": "ModuleNotFoundError: No module named 'numpy'"
+ },
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "kind": "agent",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-abs-path",
+  "kind": "reference",
+  "rerun": "ci-1",
+  "category": "missing_file",
+  "evidence": "FileNotFoundError: /tmp/reprobench-author-data/diabetes.csv not found."
+ },
+ {
+  "artifact": "ref-abs-path",
+  "kind": "reference",
+  "rerun": "container-1",
+  "category": "missing_file",
+  "evidence": "FileNotFoundError: /tmp/reprobench-author-data/diabetes.csv not found."
+ },
+ {
+  "artifact": "ref-abs-path",
+  "kind": "reference",
+  "rerun": "container-2",
+  "category": "missing_file",
+  "evidence": "FileNotFoundError: /tmp/reprobench-author-data/diabetes.csv not found."
+ },
+ {
+  "artifact": "ref-no-seed",
+  "kind": "reference",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-no-seed",
+  "kind": "reference",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-no-seed",
+  "kind": "reference",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-overclaim",
+  "kind": "reference",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-overclaim",
+  "kind": "reference",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-overclaim",
+  "kind": "reference",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-reproducible",
+  "kind": "reference",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-reproducible",
+  "kind": "reference",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-reproducible",
+  "kind": "reference",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-undeclared",
+  "kind": "reference",
+  "rerun": "ci-1",
+  "category": "import_error",
+  "evidence": "ModuleNotFoundError: No module named 'pandas'"
+ },
+ {
+  "artifact": "ref-undeclared",
+  "kind": "reference",
+  "rerun": "container-1",
+  "category": "import_error",
+  "evidence": "ModuleNotFoundError: No module named 'pandas'"
+ },
+ {
+  "artifact": "ref-undeclared",
+  "kind": "reference",
+  "rerun": "container-2",
+  "category": "import_error",
+  "evidence": "ModuleNotFoundError: No module named 'pandas'"
+ },
+ {
+  "artifact": "ref-unpinned",
+  "kind": "reference",
+  "rerun": "ci-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-unpinned",
+  "kind": "reference",
+  "rerun": "container-1",
+  "category": "ran",
+  "evidence": ""
+ },
+ {
+  "artifact": "ref-unpinned",
+  "kind": "reference",
+  "rerun": "container-2",
+  "category": "ran",
+  "evidence": ""
+ }
+]

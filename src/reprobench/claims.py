@@ -18,6 +18,7 @@ OPS = (">", "<", ">=", "<=", "≈")
 class Check:
     holds: bool
     detail: str
+    malformed: bool = False  # the claim could not be evaluated at all (bad operator, unknown key, unreadable value)
 
 
 def _value(token: Any, results: dict[str, Any]) -> float | None:
@@ -38,17 +39,17 @@ def _value(token: Any, results: dict[str, Any]) -> float | None:
 def check(claim: dict[str, Any], results: dict[str, Any]) -> Check:
     op = claim.get("op")
     if op not in OPS:
-        return Check(False, f"operator {op!r} is not one of {', '.join(OPS)}")
+        return Check(False, f"operator {op!r} is not one of {', '.join(OPS)}", malformed=True)
     left_key = str(claim.get("left", ""))
     if left_key not in results:
-        return Check(False, f"{left_key!r} is not in the results")
+        return Check(False, f"{left_key!r} is not in the results", malformed=True)
     a, b = _value(left_key, results), _value(claim.get("right"), results)
     if a is None or b is None:
-        return Check(False, f"cannot read {claim.get('left')!r} or {claim.get('right')!r} as numbers")
+        return Check(False, f"cannot read {claim.get('left')!r} or {claim.get('right')!r} as numbers", malformed=True)
     if op == "≈":
         tol = claim.get("tolerance")
         if not isinstance(tol, int | float) or isinstance(tol, bool) or tol < 0:
-            return Check(False, "≈ needs a non-negative tolerance")
+            return Check(False, "≈ needs a non-negative tolerance", malformed=True)
         ok = abs(a - b) <= float(tol)
         return Check(ok, f"|{a:.4f} − {b:.4f}| = {abs(a - b):.4f} {'≤' if ok else '>'} {float(tol):g}")
     ok = {">": a > b, "<": a < b, ">=": a >= b, "<=": a <= b}[op]

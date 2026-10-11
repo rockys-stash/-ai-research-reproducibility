@@ -1,0 +1,357 @@
+{
+ "title": "E5 Weight sensitivity",
+ "question": "Would a different weighting of the components rank the artifacts differently?",
+ "findings": [
+  "Rank correlation with the default weighting: equal 1.000, results_only 0.876, no_environment 0.887, code_gated 0.996."
+ ],
+ "tables": [
+  {
+   "id": "scores",
+   "caption": "RRS of every artifact under each weighting",
+   "columns": [
+    {
+     "key": "artifact",
+     "label": "Artifact",
+     "align": "l"
+    },
+    {
+     "key": "default",
+     "label": "default",
+     "align": "r"
+    },
+    {
+     "key": "equal",
+     "label": "equal",
+     "align": "r"
+    },
+    {
+     "key": "results_only",
+     "label": "results only",
+     "align": "r"
+    },
+    {
+     "key": "no_environment",
+     "label": "no environment",
+     "align": "r"
+    },
+    {
+     "key": "code_gated",
+     "label": "code gated",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "artifact": "bootstrap-phi-4-mini-s0",
+     "problem": "bootstrap",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 2,
+     "reruns": 3,
+     "code": 0.0,
+     "environment": 0.0,
+     "results": 0.0,
+     "claims": 0.0,
+     "rrs": 0.0,
+     "default": "0.00",
+     "equal": "0.00",
+     "results_only": "0.00",
+     "no_environment": "0.00",
+     "code_gated": "0.00"
+    },
+    {
+     "artifact": "bootstrap-qwen3-4b-s0",
+     "problem": "bootstrap",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 0.3333,
+     "claims": 0.2,
+     "rrs": 0.6,
+     "default": "0.60",
+     "equal": "0.63",
+     "results_only": "0.33",
+     "no_environment": "0.51",
+     "code_gated": "0.60"
+    },
+    {
+     "artifact": "compare-phi-4-mini-s0",
+     "problem": "compare",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 0.3333,
+     "results": 0.6667,
+     "claims": 1.0,
+     "rrs": 0.7667,
+     "default": "0.77",
+     "equal": "0.75",
+     "results_only": "0.67",
+     "no_environment": "0.89",
+     "code_gated": "0.77"
+    },
+    {
+     "artifact": "compare-qwen3-4b-s0",
+     "problem": "compare",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 1.0,
+     "claims": 0.2,
+     "rrs": 0.8,
+     "default": "0.80",
+     "equal": "0.80",
+     "results_only": "1.00",
+     "no_environment": "0.73",
+     "code_gated": "0.80"
+    },
+    {
+     "artifact": "features-phi-4-mini-s0",
+     "problem": "features",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 0.3333,
+     "results": 1.0,
+     "claims": 0.5,
+     "rrs": 0.7417,
+     "default": "0.74",
+     "equal": "0.71",
+     "results_only": "1.00",
+     "no_environment": "0.83",
+     "code_gated": "0.74"
+    },
+    {
+     "artifact": "features-qwen3-4b-s0",
+     "problem": "features",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 1.0,
+     "claims": 0.2,
+     "rrs": 0.8,
+     "default": "0.80",
+     "equal": "0.80",
+     "results_only": "1.00",
+     "no_environment": "0.73",
+     "code_gated": "0.80"
+    },
+    {
+     "artifact": "mlp-phi-4-mini-s0",
+     "problem": "mlp",
+     "agent": "phi-4-mini",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 0.6667,
+     "results": 1.0,
+     "claims": 0.8,
+     "rrs": 0.8833,
+     "default": "0.88",
+     "equal": "0.87",
+     "results_only": "1.00",
+     "no_environment": "0.93",
+     "code_gated": "0.88"
+    },
+    {
+     "artifact": "mlp-qwen3-4b-s0",
+     "problem": "mlp",
+     "agent": "qwen3-4b",
+     "kind": "agent",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 1.0,
+     "claims": 0.2,
+     "rrs": 0.8,
+     "default": "0.80",
+     "equal": "0.80",
+     "results_only": "1.00",
+     "no_environment": "0.73",
+     "code_gated": "0.80"
+    },
+    {
+     "artifact": "ref-abs-path",
+     "problem": "features",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 0.0,
+     "environment": 1.0,
+     "results": 0.0,
+     "claims": 0.0,
+     "rrs": 0.2,
+     "default": "0.20",
+     "equal": "0.25",
+     "results_only": "0.00",
+     "no_environment": "0.00",
+     "code_gated": "0.00"
+    },
+    {
+     "artifact": "ref-no-seed",
+     "problem": "mlp",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 0.6667,
+     "claims": 0.0,
+     "rrs": 0.65,
+     "default": "0.65",
+     "equal": "0.67",
+     "results_only": "0.67",
+     "no_environment": "0.56",
+     "code_gated": "0.65"
+    },
+    {
+     "artifact": "ref-overclaim",
+     "problem": "compare",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 1.0,
+     "claims": 0.3333,
+     "rrs": 0.8333,
+     "default": "0.83",
+     "equal": "0.83",
+     "results_only": "1.00",
+     "no_environment": "0.78",
+     "code_gated": "0.83"
+    },
+    {
+     "artifact": "ref-reproducible",
+     "problem": "compare",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 1.0,
+     "results": 1.0,
+     "claims": 1.0,
+     "rrs": 1.0,
+     "default": "1.00",
+     "equal": "1.00",
+     "results_only": "1.00",
+     "no_environment": "1.00",
+     "code_gated": "1.00"
+    },
+    {
+     "artifact": "ref-undeclared",
+     "problem": "bootstrap",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 0.0,
+     "environment": 0.6667,
+     "results": 0.0,
+     "claims": 0.0,
+     "rrs": 0.1333,
+     "default": "0.13",
+     "equal": "0.17",
+     "results_only": "0.00",
+     "no_environment": "0.00",
+     "code_gated": "0.00"
+    },
+    {
+     "artifact": "ref-unpinned",
+     "problem": "features",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": 1.0,
+     "environment": 0.6667,
+     "results": 1.0,
+     "claims": 1.0,
+     "rrs": 0.9333,
+     "default": "0.93",
+     "equal": "0.92",
+     "results_only": "1.00",
+     "no_environment": "1.00",
+     "code_gated": "0.93"
+    }
+   ]
+  },
+  {
+   "id": "rank",
+   "caption": "Spearman rank correlation with the default weighting",
+   "columns": [
+    {
+     "key": "scheme",
+     "label": "Weighting",
+     "align": "l"
+    },
+    {
+     "key": "rho",
+     "label": "ρ",
+     "align": "r"
+    },
+    {
+     "key": "top_same",
+     "label": "Same top artifact",
+     "align": "l"
+    }
+   ],
+   "rows": [
+    {
+     "scheme": "equal",
+     "rho": "1.000",
+     "top_same": true
+    },
+    {
+     "scheme": "results_only",
+     "rho": "0.876",
+     "top_same": false
+    },
+    {
+     "scheme": "no_environment",
+     "rho": "0.887",
+     "top_same": true
+    },
+    {
+     "scheme": "code_gated",
+     "rho": "0.996",
+     "top_same": true
+    }
+   ]
+  }
+ ],
+ "notes": []
+}

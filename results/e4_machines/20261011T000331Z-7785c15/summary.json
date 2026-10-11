@@ -1,0 +1,189 @@
+{
+ "title": "E4 A second machine",
+ "question": "Do results reproduced in a clean container also reproduce on a different machine?",
+ "findings": [
+  "13 of 14 artifacts agree between the two machines (same success, every shared value within tolerance).",
+  "Disagreeing: bootstrap-qwen3-4b-s0."
+ ],
+ "tables": [
+  {
+   "id": "machines",
+   "caption": "First container rerun vs the CI runner rerun",
+   "columns": [
+    {
+     "key": "artifact",
+     "label": "Artifact",
+     "align": "l"
+    },
+    {
+     "key": "container_ran",
+     "label": "Container ran",
+     "align": "l"
+    },
+    {
+     "key": "ci_ran",
+     "label": "CI ran",
+     "align": "l"
+    },
+    {
+     "key": "ci_python",
+     "label": "CI Python",
+     "align": "l"
+    },
+    {
+     "key": "max_abs_diff",
+     "label": "Largest difference",
+     "align": "r"
+    },
+    {
+     "key": "agree",
+     "label": "Agree within tolerance",
+     "align": "l"
+    }
+   ],
+   "rows": [
+    {
+     "artifact": "bootstrap-phi-4-mini-s0",
+     "kind": "agent",
+     "container_ran": false,
+     "ci_ran": false,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "–",
+     "agree": true
+    },
+    {
+     "artifact": "bootstrap-qwen3-4b-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.031177",
+     "agree": false
+    },
+    {
+     "artifact": "compare-phi-4-mini-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.003493",
+     "agree": true
+    },
+    {
+     "artifact": "compare-qwen3-4b-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.003493",
+     "agree": true
+    },
+    {
+     "artifact": "features-phi-4-mini-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    },
+    {
+     "artifact": "features-qwen3-4b-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    },
+    {
+     "artifact": "mlp-phi-4-mini-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    },
+    {
+     "artifact": "mlp-qwen3-4b-s0",
+     "kind": "agent",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    },
+    {
+     "artifact": "ref-abs-path",
+     "kind": "reference",
+     "container_ran": false,
+     "ci_ran": false,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "–",
+     "agree": true
+    },
+    {
+     "artifact": "ref-no-seed",
+     "kind": "reference",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.006667",
+     "agree": true
+    },
+    {
+     "artifact": "ref-overclaim",
+     "kind": "reference",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    },
+    {
+     "artifact": "ref-reproducible",
+     "kind": "reference",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    },
+    {
+     "artifact": "ref-undeclared",
+     "kind": "reference",
+     "container_ran": false,
+     "ci_ran": false,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "–",
+     "agree": true
+    },
+    {
+     "artifact": "ref-unpinned",
+     "kind": "reference",
+     "container_ran": true,
+     "ci_ran": true,
+     "ci_python": "3.12.15",
+     "ci_machine": "github-actions x86_64 Linux",
+     "max_abs_diff": "0.000000",
+     "agree": true
+    }
+   ]
+  }
+ ],
+ "notes": []
+}

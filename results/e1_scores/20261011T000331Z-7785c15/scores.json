@@ -1,0 +1,1064 @@
+[
+ {
+  "artifact": "bootstrap-phi-4-mini-s0",
+  "rrs": 0.0,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 0.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "run.err",
+      "detail": "exit 1: ModuleNotFoundError: No module named 'numpy'",
+      "ok": false
+     },
+     {
+      "rerun": "container-1",
+      "file": "run.err",
+      "detail": "exit 1: ModuleNotFoundError: No module named 'numpy'",
+      "ok": false
+     },
+     {
+      "rerun": "container-2",
+      "file": "run.err",
+      "detail": "exit 1: ModuleNotFoundError: No module named 'numpy'",
+      "ok": false
+     }
+    ]
+   },
+   "environment": {
+    "score": 0.0,
+    "parts": {
+     "build": 0.0,
+     "declared": 0.0,
+     "pinned": 0.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "pip failed:     numpy==2.5.4, pandas==3.0.6, scikit-learn==1.9.1 /          ~~~~~~~~~^ (from line 1 of requirements.txt)",
+      "ok": false
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "pip failed:     numpy==2.5.4, pandas==3.0.6, scikit-learn==1.9.1 /          ~~~~~~~~~^ (from line 1 of requirements.txt)",
+      "ok": false
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "pip failed:     numpy==2.5.4, pandas==3.0.6, scikit-learn==1.9.1 /          ~~~~~~~~~^ (from line 1 of requirements.txt)",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "imported but not declared: pandas, sklearn",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "not pinned: numpy",
+      "ok": false
+     }
+    ]
+   },
+   "results": {
+    "score": 0.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "ci_high = 1.63738: differs in ci-1: missing; container-1: missing; container-2: missing",
+      "ok": false
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "ci_low = 1.29273: differs in ci-1: missing; container-1: missing; container-2: missing",
+      "ok": false
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "mean_difference = 1.46601: differs in ci-1: missing; container-1: missing; container-2: missing",
+      "ok": false
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference > ci_high” — original: 1.4660 > 1.6374 is false; ci-1: 'mean_difference' is not in the results; container-1: 'mean_difference' is not in the results; container-2: 'mean_difference' is not in the results",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference < ci_low” — original: 1.4660 < 1.2927 is false; ci-1: 'mean_difference' is not in the results; container-1: 'mean_difference' is not in the results; container-2: 'mean_difference' is not in the results",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference >= ci_low” — ci-1: 'mean_difference' is not in the results; container-1: 'mean_difference' is not in the results; container-2: 'mean_difference' is not in the results",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference <= ci_high” — ci-1: 'mean_difference' is not in the results; container-1: 'mean_difference' is not in the results; container-2: 'mean_difference' is not in the results",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference == ci_low” — original: |1.4660 − 1.2927| = 0.1733 > 1e-05; ci-1: 'mean_difference' is not in the results; container-1: 'mean_difference' is not in the results; container-2: 'mean_difference' is not in the results",
+      "ok": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "rrs": 0.6,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 1.0,
+    "parts": {
+     "build": 1.0,
+     "declared": 1.0,
+     "pinned": 1.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "every third-party import is declared",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "every requirement pinned with ==",
+      "ok": true
+     }
+    ]
+   },
+   "results": {
+    "score": 0.3333,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "ci_high = -2.19561: differs in ci-1: -2.23392",
+      "ok": false
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "ci_low = -4.1721: differs in ci-1: -4.23946",
+      "ok": false
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "mean_difference = -3.20074: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.2,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference < ci_low” — original: -3.2007 < -4.1721 is false; ci-1: -3.2007 < -4.2395 is false; container-1: -3.2007 < -4.2103 is false; container-2: -3.2007 < -4.1749 is false",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“ci_low < mean_difference < ci_high” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mean_difference < 0” — original: cannot read 'mean_difference' or ': 0' as numbers; ci-1: cannot read 'mean_difference' or ': 0' as numbers; container-1: cannot read 'mean_difference' or ': 0' as numbers; container-2: cannot read 'mean_difference' or ': 0' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“ci_low < 0” — original: cannot read 'ci_low' or ': 0' as numbers; ci-1: cannot read 'ci_low' or ': 0' as numbers; container-1: cannot read 'ci_low' or ': 0' as numbers; container-2: cannot read 'ci_low' or ': 0' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“ci_high < 0” — original: cannot read 'ci_high' or ': 0' as numbers; ci-1: cannot read 'ci_high' or ': 0' as numbers; container-1: cannot read 'ci_high' or ': 0' as numbers; container-2: cannot read 'ci_high' or ': 0' as numbers",
+      "ok": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "rrs": 0.7667,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 0.3333,
+    "parts": {
+     "build": 1.0,
+     "declared": 0.0,
+     "pinned": 0.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "imported but not declared: numpy",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "not pinned: scikit-learn",
+      "ok": false
+     }
+    ]
+   },
+   "results": {
+    "score": 0.6667,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "accuracy_difference = 0.0123273: differs in ci-1: 0.0175749; container-2: 0.00706412",
+      "ok": false
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "lr_accuracy_mean = 0.947275: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "rf_accuracy_mean = 0.959603: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“rf_accuracy_mean > lr_accuracy_mean” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“lr_accuracy_mean < rf_accuracy_mean” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“rf_accuracy_mean >= lr_accuracy_mean” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“lr_accuracy_mean <= rf_accuracy_mean” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“rf_accuracy_mean == lr_accuracy_mean” — holds in the original and every rerun",
+      "ok": true
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "rrs": 0.8,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 1.0,
+    "parts": {
+     "build": 1.0,
+     "declared": 1.0,
+     "pinned": 1.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "every third-party import is declared",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "every requirement pinned with ==",
+      "ok": true
+     }
+    ]
+   },
+   "results": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "accuracy_difference = 0.00881851: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "lr_accuracy_mean = 0.947275: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "rf_accuracy_mean = 0.956094: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.2,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“rf_accuracy_mean > lr_accuracy_mean” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“rf_accuracy_mean >= 0.95” — original: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers; ci-1: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers; container-1: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers; container-2: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“accuracy_difference > 0.008” — original: cannot read 'accuracy_difference' or 'Heavy' as numbers; ci-1: cannot read 'accuracy_difference' or 'Heavy' as numbers; container-1: cannot read 'accuracy_difference' or 'Heavy' as numbers; container-2: cannot read 'accuracy_difference' or 'Heavy' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“rf_accuracy_mean ≈ 0.956” — original: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers; ci-1: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers; container-1: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers; container-2: cannot read 'rf_accuracy_mean' or 'Heavy' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“lr_accuracy_mean ≈ 0.947” — original: cannot read 'lr_accuracy_mean' or 'Heavy' as numbers; ci-1: cannot read 'lr_accuracy_mean' or 'Heavy' as numbers; container-1: cannot read 'lr_accuracy_mean' or 'Heavy' as numbers; container-2: cannot read 'lr_accuracy_mean' or 'Heavy' as numbers",
+      "ok": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "rrs": 0.7417,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 0.3333,
+    "parts": {
+     "build": 1.0,
+     "declared": 0.0,
+     "pinned": 0.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "imported but not declared: numpy",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "not pinned: scikit-learn",
+      "ok": false
+     }
+    ]
+   },
+   "results": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "poly_ridge_r2_mean = 0.410574: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "r2_difference = 0.000399201: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "ridge_r2_mean = 0.410175: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.5,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“poly_ridge_r2_mean < ridge_r2_mean” — original: 0.4106 < 0.4102 is false; ci-1: 0.4106 < 0.4102 is false; container-1: 0.4106 < 0.4102 is false; container-2: 0.4106 < 0.4102 is false",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“r2_difference > 0” — holds in the original and every rerun",
+      "ok": true
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "rrs": 0.8,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 1.0,
+    "parts": {
+     "build": 1.0,
+     "declared": 1.0,
+     "pinned": 1.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "every third-party import is declared",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "every requirement pinned with ==",
+      "ok": true
+     }
+    ]
+   },
+   "results": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "poly_ridge_r2_mean = 0.410574: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "r2_difference = 0.000399201: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "ridge_r2_mean = 0.410175: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.2,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“ridge_r2_mean < poly_ridge_r2_mean” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“r2_difference ≈ 0.0004” — original: cannot read 'r2_difference' or '' as numbers; ci-1: cannot read 'r2_difference' or '' as numbers; container-1: cannot read 'r2_difference' or '' as numbers; container-2: cannot read 'r2_difference' or '' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“poly_ridge_r2_mean ≈ 0.4106” — original: cannot read 'poly_ridge_r2_mean' or '' as numbers; ci-1: cannot read 'poly_ridge_r2_mean' or '' as numbers; container-1: cannot read 'poly_ridge_r2_mean' or '' as numbers; container-2: cannot read 'poly_ridge_r2_mean' or '' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“ridge_r2_mean ≈ 0.4102” — original: cannot read 'ridge_r2_mean' or '' as numbers; ci-1: cannot read 'ridge_r2_mean' or '' as numbers; container-1: cannot read 'ridge_r2_mean' or '' as numbers; container-2: cannot read 'ridge_r2_mean' or '' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“ridge_r2_mean < 0.42” — original: cannot read 'ridge_r2_mean' or '' as numbers; ci-1: cannot read 'ridge_r2_mean' or '' as numbers; container-1: cannot read 'ridge_r2_mean' or '' as numbers; container-2: cannot read 'ridge_r2_mean' or '' as numbers",
+      "ok": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "rrs": 0.8833,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 0.6667,
+    "parts": {
+     "build": 1.0,
+     "declared": 1.0,
+     "pinned": 0.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "every third-party import is declared",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "not pinned: scikit-learn",
+      "ok": false
+     }
+    ]
+   },
+   "results": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "accuracy_difference = 0.00666667: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "mlp128_test_accuracy = 0.975556: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "mlp32_test_accuracy = 0.968889: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.8,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp32_test_accuracy < mlp128_test_accuracy” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp128_test_accuracy > mlp32_test_accuracy” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp128_test_accuracy - mlp32_test_accuracy = accuracy_difference” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp128_test_accuracy - mlp32_test_accuracy < accuracy_difference” — original: 0.9756 < 0.0067 is false; ci-1: 0.9756 < 0.0067 is false; container-1: 0.9756 < 0.0067 is false; container-2: 0.9756 < 0.0067 is false",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp128_test_accuracy - mlp32_test_accuracy = 0.006666666666666599” — holds in the original and every rerun",
+      "ok": true
+     }
+    ]
+   }
+  }
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "rrs": 0.8,
+  "reruns": [
+   "ci-1",
+   "container-1",
+   "container-2"
+  ],
+  "components": {
+   "code": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "meta.json",
+      "detail": "run.py exited 0 and wrote results.json",
+      "ok": true
+     }
+    ]
+   },
+   "environment": {
+    "score": 1.0,
+    "parts": {
+     "build": 1.0,
+     "declared": 1.0,
+     "pinned": 1.0
+    },
+    "evidence": [
+     {
+      "rerun": "ci-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-1",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "container-2",
+      "file": "build.log",
+      "detail": "environment built",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "run.py",
+      "detail": "every third-party import is declared",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "requirements.txt",
+      "detail": "every requirement pinned with ==",
+      "ok": true
+     }
+    ]
+   },
+   "results": {
+    "score": 1.0,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "accuracy_difference = 0.0177778: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "mlp128_test_accuracy = 0.955556: reproduced in every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "original",
+      "file": "results.json",
+      "detail": "mlp32_test_accuracy = 0.937778: reproduced in every rerun",
+      "ok": true
+     }
+    ]
+   },
+   "claims": {
+    "score": 0.2,
+    "parts": {},
+    "evidence": [
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp128_test_accuracy > mlp32_test_accuracy” — holds in the original and every rerun",
+      "ok": true
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“accuracy_difference > 0” — original: cannot read 'accuracy_difference' or ': 0' as numbers; ci-1: cannot read 'accuracy_difference' or ': 0' as numbers; container-1: cannot read 'accuracy_difference' or ': 0' as numbers; container-2: cannot read 'accuracy_difference' or ': 0' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp128_test_accuracy ≈ 0.9556” — original: cannot read 'mlp128_test_accuracy' or ': 0.9556' as numbers; ci-1: cannot read 'mlp128_test_accuracy' or ': 0.9556' as numbers; container-1: cannot read 'mlp128_test_accuracy' or ': 0.9556' as numbers; container-2: cannot read 'mlp128_test_accuracy' or ': 0.9556' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“mlp32_test_accuracy ≈ 0.9378” — original: cannot read 'mlp32_test_accuracy' or ': 0.9378' as numbers; ci-1: cannot read 'mlp32_test_accuracy' or ': 0.9378' as numbers; container-1: cannot read 'mlp32_test_accuracy' or ': 0.9378' as numbers; container-2: cannot read 'mlp32_test_accuracy' or ': 0.9378' as numbers",
+      "ok": false
+     },
+     {
+      "rerun": "artifact",
+      "file": "claims.json",
+      "detail": "“accuracy_difference ≈ 0.0178” — original: cannot read 'accuracy_difference' or ': 0.0178' as numbers; ci-1: cannot read 'accuracy_difference' or ': 0.0178' as numbers; container-1: cannot read 'accuracy_difference' or ': 0.0178' as numbers; container-2: cannot read 'accuracy_difference' or ': 0.0178' as numbers",
+      "ok": false
+     }
+    ]
+   }
+  }
+ }
+]

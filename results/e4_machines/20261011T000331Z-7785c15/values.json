@@ -1,0 +1,233 @@
+[
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "key": "ci_high",
+  "container": -2.2027375268560494,
+  "ci": -2.23391501551683,
+  "same": false
+ },
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "key": "ci_low",
+  "container": -4.2103413702554295,
+  "ci": -4.239464669372164,
+  "same": true
+ },
+ {
+  "artifact": "bootstrap-qwen3-4b-s0",
+  "key": "mean_difference",
+  "container": -3.200740033420864,
+  "ci": -3.200740033420864,
+  "same": true
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "key": "accuracy_difference",
+  "container": 0.0158205247632357,
+  "ci": 0.017574910728147763,
+  "same": true
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "key": "lr_accuracy_mean",
+  "container": 0.9472752678155565,
+  "ci": 0.9437820214252446,
+  "same": true
+ },
+ {
+  "artifact": "compare-phi-4-mini-s0",
+  "key": "rf_accuracy_mean",
+  "container": 0.9630957925787922,
+  "ci": 0.9613569321533924,
+  "same": true
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "key": "accuracy_difference",
+  "container": 0.008818506443099006,
+  "ci": 0.012311752833410905,
+  "same": true
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "key": "lr_accuracy_mean",
+  "container": 0.9472752678155565,
+  "ci": 0.9437820214252446,
+  "same": true
+ },
+ {
+  "artifact": "compare-qwen3-4b-s0",
+  "key": "rf_accuracy_mean",
+  "container": 0.9560937742586555,
+  "ci": 0.9560937742586555,
+  "same": true
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "key": "poly_ridge_r2_mean",
+  "container": 0.41057417248885664,
+  "ci": 0.4105741724888567,
+  "same": true
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "key": "r2_difference",
+  "container": 0.0003992011479676538,
+  "ci": 0.00039920114796770934,
+  "same": true
+ },
+ {
+  "artifact": "features-phi-4-mini-s0",
+  "key": "ridge_r2_mean",
+  "container": 0.410174971340889,
+  "ci": 0.410174971340889,
+  "same": true
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "key": "poly_ridge_r2_mean",
+  "container": 0.4105741724888567,
+  "ci": 0.4105741724888567,
+  "same": true
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "key": "r2_difference",
+  "container": 0.00039920114796770934,
+  "ci": 0.00039920114796770934,
+  "same": true
+ },
+ {
+  "artifact": "features-qwen3-4b-s0",
+  "key": "ridge_r2_mean",
+  "container": 0.410174971340889,
+  "ci": 0.410174971340889,
+  "same": true
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "key": "accuracy_difference",
+  "container": 0.006666666666666599,
+  "ci": 0.006666666666666599,
+  "same": true
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "key": "mlp128_test_accuracy",
+  "container": 0.9755555555555555,
+  "ci": 0.9755555555555555,
+  "same": true
+ },
+ {
+  "artifact": "mlp-phi-4-mini-s0",
+  "key": "mlp32_test_accuracy",
+  "container": 0.9688888888888889,
+  "ci": 0.9688888888888889,
+  "same": true
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "key": "accuracy_difference",
+  "container": 0.01777777777777778,
+  "ci": 0.01777777777777778,
+  "same": true
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "key": "mlp128_test_accuracy",
+  "container": 0.9555555555555556,
+  "ci": 0.9555555555555556,
+  "same": true
+ },
+ {
+  "artifact": "mlp-qwen3-4b-s0",
+  "key": "mlp32_test_accuracy",
+  "container": 0.9377777777777778,
+  "ci": 0.9377777777777778,
+  "same": true
+ },
+ {
+  "artifact": "ref-no-seed",
+  "key": "accuracy_difference",
+  "container": 0.006666666666666599,
+  "ci": 0.00666666666666671,
+  "same": true
+ },
+ {
+  "artifact": "ref-no-seed",
+  "key": "mlp128_test_accuracy",
+  "container": 0.98,
+  "ci": 0.9866666666666667,
+  "same": true
+ },
+ {
+  "artifact": "ref-no-seed",
+  "key": "mlp32_test_accuracy",
+  "container": 0.9733333333333334,
+  "ci": 0.98,
+  "same": true
+ },
+ {
+  "artifact": "ref-overclaim",
+  "key": "accuracy_difference",
+  "container": -0.021068157118459996,
+  "ci": -0.021068157118459996,
+  "same": true
+ },
+ {
+  "artifact": "ref-overclaim",
+  "key": "lr_accuracy_mean",
+  "container": 0.9789163173420278,
+  "ci": 0.9789163173420278,
+  "same": true
+ },
+ {
+  "artifact": "ref-overclaim",
+  "key": "rf_accuracy_mean",
+  "container": 0.9578481602235678,
+  "ci": 0.9578481602235678,
+  "same": true
+ },
+ {
+  "artifact": "ref-reproducible",
+  "key": "accuracy_difference",
+  "container": -0.021068157118459996,
+  "ci": -0.021068157118459996,
+  "same": true
+ },
+ {
+  "artifact": "ref-reproducible",
+  "key": "lr_accuracy_mean",
+  "container": 0.9789163173420278,
+  "ci": 0.9789163173420278,
+  "same": true
+ },
+ {
+  "artifact": "ref-reproducible",
+  "key": "rf_accuracy_mean",
+  "container": 0.9578481602235678,
+  "ci": 0.9578481602235678,
+  "same": true
+ },
+ {
+  "artifact": "ref-unpinned",
+  "key": "poly_ridge_r2_mean",
+  "container": 0.43508354724193,
+  "ci": 0.43508354724193127,
+  "same": true
+ },
+ {
+  "artifact": "ref-unpinned",
+  "key": "r2_difference",
+  "container": -0.05452681353585337,
+  "ci": -0.054526813535851926,
+  "same": true
+ },
+ {
+  "artifact": "ref-unpinned",
+  "key": "ridge_r2_mean",
+  "container": 0.48961036077778336,
+  "ci": 0.4896103607777832,
+  "same": true
+ }
+]

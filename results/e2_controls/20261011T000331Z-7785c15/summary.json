@@ -1,0 +1,164 @@
+{
+ "title": "E2 Known-defect controls",
+ "question": "Does each component fall when, and only when, its planted defect is present?",
+ "findings": [
+  "22 of 22 expected component outcomes observed (low means below 0.67).",
+  "Not as expected: none.",
+  "RRS order: reproducible 1.00, unpinned 0.93, overclaim 0.83, no-seed 0.65, abs-path 0.20, undeclared 0.13."
+ ],
+ "tables": [
+  {
+   "id": "controls",
+   "caption": "Reference controls: components and RRS",
+   "columns": [
+    {
+     "key": "control",
+     "label": "Control",
+     "align": "l"
+    },
+    {
+     "key": "defect",
+     "label": "Planted defect",
+     "align": "l"
+    },
+    {
+     "key": "code",
+     "label": "Code",
+     "align": "r"
+    },
+    {
+     "key": "environment",
+     "label": "Environment",
+     "align": "r"
+    },
+    {
+     "key": "results",
+     "label": "Results",
+     "align": "r"
+    },
+    {
+     "key": "claims",
+     "label": "Claims",
+     "align": "r"
+    },
+    {
+     "key": "rrs",
+     "label": "RRS",
+     "align": "r"
+    },
+    {
+     "key": "as_expected",
+     "label": "Components as expected",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "artifact": "ref-abs-path",
+     "problem": "features",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "0.00",
+     "environment": "1.00",
+     "results": "0.00",
+     "claims": "0.00",
+     "rrs": "0.20",
+     "control": "abs-path",
+     "defect": "reads its data from an absolute path that exists only on the author's machine",
+     "as_expected": "4/4"
+    },
+    {
+     "artifact": "ref-no-seed",
+     "problem": "mlp",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "0.67",
+     "claims": "0.00",
+     "rrs": "0.65",
+     "control": "no-seed",
+     "defect": "no random seed",
+     "as_expected": "4/4"
+    },
+    {
+     "artifact": "ref-overclaim",
+     "problem": "compare",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "1.00",
+     "claims": "0.33",
+     "rrs": "0.83",
+     "control": "overclaim",
+     "defect": "a claim its own results do not support",
+     "as_expected": "4/4"
+    },
+    {
+     "artifact": "ref-reproducible",
+     "problem": "compare",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "1.00",
+     "results": "1.00",
+     "claims": "1.00",
+     "rrs": "1.00",
+     "control": "reproducible",
+     "defect": "none",
+     "as_expected": "4/4"
+    },
+    {
+     "artifact": "ref-undeclared",
+     "problem": "bootstrap",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "0.00",
+     "environment": "0.67",
+     "results": "0.00",
+     "claims": "0.00",
+     "rrs": "0.13",
+     "control": "undeclared",
+     "defect": "imports a package (pandas) that requirements.txt does not declare",
+     "as_expected": "4/4"
+    },
+    {
+     "artifact": "ref-unpinned",
+     "problem": "features",
+     "agent": "reference",
+     "kind": "reference",
+     "author_ran": true,
+     "executions": 1,
+     "reruns": 3,
+     "code": "1.00",
+     "environment": "0.67",
+     "results": "1.00",
+     "claims": "1.00",
+     "rrs": "0.93",
+     "control": "unpinned",
+     "defect": "dependencies not pinned",
+     "as_expected": "2/2"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Expected outcomes were written in references/*/expected.yaml before any rerun: {\"abs-path\": \"reads its data from an absolute path that exists only on the author's machine\", \"no-seed\": \"no random seed\", \"overclaim\": \"a claim its own results do not support\", \"reproducible\": \"none\", \"undeclared\": \"imports a package (pandas) that requirements.txt does not declare\", \"unpinned\": \"dependencies not pinned\"}"
+ ]
+}

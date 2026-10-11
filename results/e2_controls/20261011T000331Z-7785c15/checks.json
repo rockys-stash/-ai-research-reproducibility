@@ -1,0 +1,156 @@
+[
+ {
+  "control": "abs-path",
+  "component": "code",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "abs-path",
+  "component": "environment",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "abs-path",
+  "component": "results",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "abs-path",
+  "component": "claims",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "no-seed",
+  "component": "code",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "no-seed",
+  "component": "environment",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "no-seed",
+  "component": "results",
+  "expected": "low",
+  "score": 0.6667,
+  "as_expected": true
+ },
+ {
+  "control": "no-seed",
+  "component": "claims",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "overclaim",
+  "component": "code",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "overclaim",
+  "component": "environment",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "overclaim",
+  "component": "results",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "overclaim",
+  "component": "claims",
+  "expected": "low",
+  "score": 0.3333,
+  "as_expected": true
+ },
+ {
+  "control": "reproducible",
+  "component": "code",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "reproducible",
+  "component": "environment",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "reproducible",
+  "component": "results",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "reproducible",
+  "component": "claims",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "undeclared",
+  "component": "code",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "undeclared",
+  "component": "environment",
+  "expected": "low",
+  "score": 0.6667,
+  "as_expected": true
+ },
+ {
+  "control": "undeclared",
+  "component": "results",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "undeclared",
+  "component": "claims",
+  "expected": "low",
+  "score": 0.0,
+  "as_expected": true
+ },
+ {
+  "control": "unpinned",
+  "component": "code",
+  "expected": "high",
+  "score": 1.0,
+  "as_expected": true
+ },
+ {
+  "control": "unpinned",
+  "component": "environment",
+  "expected": "low",
+  "score": 0.6667,
+  "as_expected": true
+ }
+]

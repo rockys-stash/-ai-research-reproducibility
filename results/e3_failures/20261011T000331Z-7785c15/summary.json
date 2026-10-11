@@ -1,0 +1,194 @@
+{
+ "title": "E3 Why reproduction fails",
+ "question": "When a rerun fails or gives different numbers, what is the cause in its logs?",
+ "findings": [
+  "Agent artifacts: 21 of 24 reruns produced results; failures: install_failure 3.",
+  "Agent value patterns: reproduced (5), no comparison (1), differs between machines (1), non-deterministic (two identical containers disagree) (1).",
+  "Claims false on the author's own results: 21 (agent artifacts)."
+ ],
+ "tables": [
+  {
+   "id": "categories_agent",
+   "caption": "Rerun outcomes, agent artifacts",
+   "columns": [
+    {
+     "key": "category",
+     "label": "Outcome",
+     "align": "l"
+    },
+    {
+     "key": "n",
+     "label": "Reruns",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "category": "ran",
+     "n": 21
+    },
+    {
+     "category": "install_failure",
+     "n": 3
+    }
+   ]
+  },
+  {
+   "id": "categories_reference",
+   "caption": "Rerun outcomes, reference artifacts",
+   "columns": [
+    {
+     "key": "category",
+     "label": "Outcome",
+     "align": "l"
+    },
+    {
+     "key": "n",
+     "label": "Reruns",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "category": "ran",
+     "n": 12
+    },
+    {
+     "category": "missing_file",
+     "n": 3
+    },
+    {
+     "category": "import_error",
+     "n": 3
+    }
+   ]
+  },
+  {
+   "id": "values",
+   "caption": "Value patterns and claims per artifact",
+   "columns": [
+    {
+     "key": "artifact",
+     "label": "Artifact",
+     "align": "l"
+    },
+    {
+     "key": "author_ran",
+     "label": "Ran for author",
+     "align": "l"
+    },
+    {
+     "key": "values",
+     "label": "Values",
+     "align": "l"
+    },
+    {
+     "key": "claims_false_for_author",
+     "label": "Claims false on the author's own results",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "artifact": "bootstrap-phi-4-mini-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "no comparison",
+     "claims_false_for_author": 3
+    },
+    {
+     "artifact": "bootstrap-qwen3-4b-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "differs between machines",
+     "claims_false_for_author": 4
+    },
+    {
+     "artifact": "compare-phi-4-mini-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "non-deterministic (two identical containers disagree)",
+     "claims_false_for_author": 0
+    },
+    {
+     "artifact": "compare-qwen3-4b-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 4
+    },
+    {
+     "artifact": "features-phi-4-mini-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 1
+    },
+    {
+     "artifact": "features-qwen3-4b-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 4
+    },
+    {
+     "artifact": "mlp-phi-4-mini-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 1
+    },
+    {
+     "artifact": "mlp-qwen3-4b-s0",
+     "kind": "agent",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 4
+    },
+    {
+     "artifact": "ref-abs-path",
+     "kind": "reference",
+     "author_ran": true,
+     "values": "no comparison",
+     "claims_false_for_author": 0
+    },
+    {
+     "artifact": "ref-no-seed",
+     "kind": "reference",
+     "author_ran": true,
+     "values": "reruns agree with each other, not with the author",
+     "claims_false_for_author": 1
+    },
+    {
+     "artifact": "ref-overclaim",
+     "kind": "reference",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 2
+    },
+    {
+     "artifact": "ref-reproducible",
+     "kind": "reference",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 0
+    },
+    {
+     "artifact": "ref-undeclared",
+     "kind": "reference",
+     "author_ran": true,
+     "values": "no comparison",
+     "claims_false_for_author": 0
+    },
+    {
+     "artifact": "ref-unpinned",
+     "kind": "reference",
+     "author_ran": true,
+     "values": "reproduced",
+     "claims_false_for_author": 0
+    }
+   ]
+  }
+ ],
+ "notes": []
+}
