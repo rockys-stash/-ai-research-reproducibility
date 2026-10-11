@@ -59,3 +59,17 @@ rerun.
 
 **D13. No error bars.** Eight agent artifacts and six controls: counts are reported, not rates
 with intervals (METRICS).
+
+**D14. Claims that cannot be evaluated are reported apart from false claims.** The claims
+component is unchanged: a claim that cannot be evaluated cannot hold (METRICS). But E3 first
+counted both kinds as "false on the author's own results", which overstated how often the agents
+were wrong about their numbers. Qwen3-4B wrote the number in the claim's text and a word in the
+structured `right` field (for example `"right": "Heavy"` for "rf_accuracy_mean ≥ 0.95") in 15 of
+its 20 claims. E3 now reports claims that cannot be evaluated and well-formed false claims
+separately. Changed after the first E3 run was read; it changes a table, not a score.
+
+**D15. Value patterns follow the tolerance, not the cause.** E3's per-artifact pattern compares
+values with the reproduction tolerance (|Δ| ≤ max(0.005, 1%)). An unseeded bootstrap whose noise is
+close to the tolerance can therefore read as "differs between machines" when two container reruns
+happened to land within tolerance of each other and the CI rerun did not
+(`bootstrap-qwen3-4b-s0`). The report names the cause (no seed) from the code, not from the label.
